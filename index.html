@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,700" rel="stylesheet">
+  <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <title>Above and Beyond</title>
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="header__title" id="title">Above and Beyond
+        <span class="tm">&trade;</span>
+      </h1>
+      <h2 class="header__subtitle">Space flight booking</h2>
+      <p class="tagline" id="description">From the moons of Jupiter, to the rings of Saturn. Travel the stars in style.</p>
+      <!-- <p class="tagline" id="description">Travel the stars in style</p> -->
+    </header>
+    <section class="form-section">
+      <form class="form" id="survey-form" action="#">
+        <h3 class="form__header">Enter booking information</h3>
+
+        <div class="title-name">
+          <span class="title-label">Title: </span>
+          <label for="title-mr">Mister:
+            <span title="required">*</span>
+          </label>
+          <input type="radio" name="title" id="title-mr" value="M." required>
+
+          <label for="title-miss">Miss:
+            <span title="required">*</span>
+          </label>
+          <input type="radio" name="title" id="title-miss" value="Ms." required>
+        </div>
+
+
+        <label id="name-label" for="name">Name:
+          <span title="required">*</span>
+        </label>
+        <input type="text" name="name" id="name" placeholder="Enter name" autocomplete="off" required>
+
+        <label id="email-label" for="email">Email:
+          <span title="required">*</span>
+        </label>
+        <input type="email" name="email" id="email" placeholder="Enter email" autocomplete="off" required>
+
+        <label id="number-label" for="number">Age:
+          <span title="required">*</span>
+        </label>
+        <input type="number" name="age" id="number" min="18" max="85" placeholder="Enter age" required>
+
+
+        <span>Destination: </span>
+        <select id="dropdown" name="destination" id="dropdown" required>
+          <option value="">Choose your destination</option>
+          <optgroup label="Local solar system">
+            <option value="moon">The Moon</option>
+            <option value="venus">Venus</option>
+            <option value="mars">Mars</option>
+            <option value="jupiter">Jupiter</option>
+            <option value="saturn">Saturn</option>
+          </optgroup>
+          <optgroup label="Distant solar systems">
+            <option value="alpha-centauri">Alpha Centauri</option>
+            <option value="sirius">Sirius</option>
+            <option value="epsilon-eridani">Epsilon Eridani</option>
+            <option value="ez-aquarii">EZ Aquarii</option>
+            <option value="procyon">Procyon</option>
+            <option value="epsilon-indi">Epsilon Indi</option>
+          </optgroup>
+        </select>
+
+        <label for="ticketNum">Tickets:</label>
+        <input id="ticketNum" type="number" name="ticketNum" min="1" value="0">
+
+        <span class="recreation">Recreational activities</span>
+        <span class="recreation-paragraph">On longer flights we provide recreational activities.</span>
+
+        <hr class="form-divider">
+
+        <div class="checkbox-subgrid">
+          <label for="music">Music</label>
+          <input type="checkbox" id="music" name="interest" value="music">
+
+          <label for="art">Art</label>
+          <input type="checkbox" id="art" name="interest" value="art">
+
+          <label for="sports">Sports</label>
+          <input type="checkbox" id="sports" name="interest" value="sports">
+
+          <label for="massage">Massage</label>
+          <input type="checkbox" id="massage" name="interest" value="massage">
+        </div>
+
+        <label for="message">Message:</label>
+        <textarea name="" id="message" cols="30" rows="10" placeholder="Message us with inquiries or requirements"></textarea>
+        <!-- wrapping the button text in a span and using positioning, fixes the text jumping with active state animation i see in firefox -->
+        <!-- Button hover state is still inconsistent across browsers on the last media break point -->
+        <button class="submit-btn" id="submit" type="submit"><span class="submit-btn-text">Take me to the stars</span><img class="submit-btn__icon" src="./img/rocket-1976107_640-rtsm.png" alt=""></button>
+      </form>
+    </section>
+  </main>
+  <script src="main.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
