@@ -55,8 +55,10 @@
         <input type="number" name="age" id="number" min="18" max="85" placeholder="Enter age" required>
 
 
-        <span>Destination: </span>
-        <select id="dropdown" name="destination" id="dropdown" required>
+        <label id="dropdown-label" for="dropdown">Destination:
+          <span title="required">*</span>
+        </label>
+        <select id="dropdown" name="destination" required>
           <option value="">Choose your destination</option>
           <optgroup label="Local solar system">
             <option value="moon">The Moon</option>
@@ -75,8 +77,10 @@
           </optgroup>
         </select>
 
-        <label for="ticketNum">Tickets:</label>
-        <input id="ticketNum" type="number" name="ticketNum" min="1" value="0">
+        <label id="ticketNum-label" for="ticketNum">Tickets:
+          <span title="required">*</span>
+        </label>
+        <input id="ticketNum" type="number" name="ticketNum" min="1" value="0" required>
 
         <span class="recreation">Recreational activities</span>
         <span class="recreation-paragraph">On longer flights we provide recreational activities.</span>
